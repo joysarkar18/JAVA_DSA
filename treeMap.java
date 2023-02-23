@@ -13,6 +13,13 @@ public class treeMap {
             hm.put(2, 3);
             hm.put(1, 5);
 
+            Collections.sort(hm, new Comparator<Map.Entry<String, Integer>>() {
+                public int compare(Map.Entry<String, Integer> o1,
+                        Map.Entry<String, Integer> o2) {
+                    return (o1.getValue()).compareTo(o2.getValue());
+                }
+            });
+
             for (Map.Entry<Integer, Integer> e : hm.entrySet()) {
                 System.out.println(e.getKey() + " => " + e.getValue());
 
