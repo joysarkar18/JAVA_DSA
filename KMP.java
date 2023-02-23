@@ -2,11 +2,38 @@ import java.util.Arrays;
 
 public class KMP {
     public static void main(String[] args) {
-
-        String t = "abcabf";
+        String str = "abfabchgfhas";
+        String t = "abc";
         int arr[] = lps(t);
-        System.out.println(Arrays.toString(arr));
+        int ans = kmp(str, t, arr);
+        System.out.println(ans);
 
+    }
+
+    public static int kmp(String str, String t, int arr[]) {
+        int n = str.length();
+        int j = 0;
+        int i = 0;
+        int pos = -1;
+        while (i < n) {
+            if (str.charAt(i) == t.charAt(j)) {
+                i++;
+                j++;
+            } else {
+                if (j != 0) {
+                    j = arr[j - 1];
+                } else {
+                    i++;
+                }
+            }
+
+            if (j == t.length()) {
+                pos = i - t.length();
+                break;
+            }
+        }
+
+        return pos;
     }
 
     public static int[] lps(String t) {

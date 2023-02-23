@@ -51,6 +51,9 @@ public class C_Koxia_and_Number_Theory {
                     System.out.println("YES");
                 }
 
+                HashMap<Integer, Integer> hm = new HashMap<>();
+                String s = "agc";
+
             }
             out.close();
         } catch (Exception e) {
