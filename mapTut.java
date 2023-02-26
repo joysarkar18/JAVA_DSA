@@ -2,12 +2,16 @@ import java.util.*;
 
 public class mapTut {
     public static void main(String[] args) {
-        System.out.println("main");
-        HashMap<Integer, Integer> hm = new HashMap<>();
-        hm.put(1, 2);
-        for (Map.Entry<Integer, Integer> i : hm.entrySet()) {
-            System.out.println(i.getValue());
-        }
+        int a = 20, b = 5, c = 4;
+        a = b + c;
+        c = a - b;
+        c = b + c;
+        c = c + a;
+        b = b - a;
+        a = c + b;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
 
     }
 
