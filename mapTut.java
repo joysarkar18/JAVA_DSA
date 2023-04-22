@@ -13,6 +13,13 @@ public class mapTut {
         System.out.println(b);
         System.out.println(c);
 
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        hm.put(1, 2);
+
+        for (Map.Entry<Integer, Integer> entry : hm.entrySet()) {
+            System.out.println(entry.getValue());
+        }
+
     }
 
 }
